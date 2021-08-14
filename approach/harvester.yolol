@@ -1,10 +1,10 @@
-:Approach=0 
+:Approach=0 min=24 max=30 avg=25.5
 done=0 dir=0
 if :Approach==0 then goto 2 end 
 d=:RF if d<1000 then goto 6 end
 :FcuForward=0 :FcuBackward=0 :Approach=0 goto 3
-if d>24 and d<30 then goto 9 end
-done=0 cd=25.5-d dx=od-cd od=cd adj=-(cd-5*dx) goto 15
+if d>min and d<max then goto 9 end
+done=0 cd=avg-d dx=od-cd od=cd adj=-(cd-5*dx) goto 15
 
 :FcuForward=0 :FcuBackward=0
 done++ if done > 10 then :Approach = 0 end
