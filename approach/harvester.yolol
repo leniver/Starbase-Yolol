@@ -1,6 +1,6 @@
-:Approach=0 // Approach ahead -Mutleyx
-done=0 dir=0 //:AheadSearch=0 od=0 d=0 :AheadRF=0
-if :Approach==0 then goto 2 end //:AheadRF=1 :AheadSearch=500
+:Approach=0 
+done=0 dir=0
+if :Approach==0 then goto 2 end 
 d=:RF if d<1000 then goto 6 end
 :FcuForward=0 :FcuBackward=0 :Approach=0 goto 3
 if d>24 and d<30 then goto 9 end
@@ -16,5 +16,5 @@ if adj>d then adj=d end :FcuForward=0 :FcuBackward=0
 if adj<0 then :FcuBackward=-adj*0.4 else :FcuForward=adj*0.20 end
 if :Approach then goto 4 else goto 9 end
 
-// Based on Dragonfly-Script by Mutleyx
+// Button: :Approach
 
