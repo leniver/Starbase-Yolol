@@ -1,0 +1,20 @@
+m=999 r=0 g=0 i=0
+g=0 r=1000 x/=(:RA1<m)*(:RA1>0) r=:RA1 g=10 goto6
+x/=(:RA2<m)*(:RA2>0) r=:RA2 g=12 goto6
+x/=(:RA3<m)*(:RA3>0) r=:RA3 g=11 goto6
+x/=(:RA4<m)*(:RA4>0) r=:RA4 g=13 goto6
+:RangeAhead=r goto2+(g*(:Approach==0)*(:Laser==0))
+goto20 // Security
+
+
+
+
+:FcuUpDown=-100 if :RA1<m then goto12 end goto17 // TOP
+:FcuUpDown=100 if :RA3<m then goto13 end goto17 // BOTTOM
+:FcuRightLeft=-100 if :RA2<m then goto14 end goto17 // RIGHT
+:FcuRightLeft=100 if :RA4<m then goto15 end goto17 // LEFT
+
+if i++<10 then goto17 end goto20
+
+
+i=0 :FcuUpDown=0 :FcuRightLeft=0 goto2
