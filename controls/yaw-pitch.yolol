@@ -1,0 +1,9 @@
+b=30 m=0 n=0 r=25
+m=b-(r*:PathFinder) n=m*-1 :Pm=m :Pn=n :Ym=m :Yn=n goto2
+
+
+// Button, :pathfinder
+// Yaw Max: :ym
+// Yaw Min: :yn
+// Pitch Max: :pm
+// Pitch Min: :pn
