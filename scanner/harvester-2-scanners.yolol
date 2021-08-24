@@ -1,8 +1,8 @@
 LF="\n" F="Failed..."+LF B="Scanning..."+LF X="Material:" +LF
 A="Amount:"+LF R="Ready" DL=20*5 
-goto 3+:Scanner
-:SReset=1 :SA2=(:MiningMode and (:RF<50)) :SA1=(not :SA2)
-:SI1=0 :SI2=0 :SA=1 :Scan=LF+B :Scanner_Scr=8
+:SReset=1 goto 3+:Scanner
+ SA2=(:MiningMode and (:RF<50)) :SA1=(not :SA2)
+:SI1=0 :SI2=0 :SA=1 :Sscan=1 :Scan=LF+B :Scanner_Scr=8
 if :SA2 then goto9 end goto7+(6*(:SR1!=2))
 :MA1=:SM1-" Ore"-" Crystal" :V01=:SV1 :Scan=LF+B
 :SI1=1 :MA2=:SM1-" Ore"-" Crystal" :V02=:SV1 goto12
@@ -22,5 +22,5 @@ goto 3
 // Memory card: :ScanDisp
 // Screen: :Scan
 // Button: :Scanner
-// Scanner1: :SA1, :SI1, :SM1, :SR1, :SV1, :SA
-// Scanner2: :SA2, :SI2, :SM2, :SR2, :SV2, :SA
+// Scanner1: :SA1, :SI1, :SM1, :SR1, :SV1, :SA, :SReset
+// Scanner2: :SA2, :SI2, :SM2, :SR2, :SV2, :SA, :SReset
