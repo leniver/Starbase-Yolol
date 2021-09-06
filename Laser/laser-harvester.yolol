@@ -1,0 +1,4 @@
+:MLL1=9 :LTP=0 :LTR=0 :CTR=0 :TurretPitch=:LTPC goto :MiningMode+1
+M=sqrt(8.74^2+(23.67-:RF)^2)+2 if (:LTPC>85) or (:RF>42) then M=9 end
+:MLL1=M :LTP=:SMTP :TurretPitch=:LTPC goto :MiningMode+1
+goto1
