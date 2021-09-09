@@ -15,5 +15,5 @@ r-- d=:R4 if d>v then d=:R5 end if d>v then d=:R6 end goto6-(1*(d>v))
 
 F=a*FM*(a>0) T=F  F=F*(F<M)+M*(F>=M) T=T*(T<L)+L*(T>=L)
 B=-a*BM*(a<0) B=B*(B<M)+M*(B>=M)
-:FcuBackward=-B :FcuForward=F F+=I*(a>0) goto18+(T<F)+(a<0)
+:FcuBackward=B :FcuForward=F F+=I*(a>0) goto18+(T<F)+(a<0)
 if :Approach then goto4 else goto9 end
