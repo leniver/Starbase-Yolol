@@ -1,17 +1,19 @@
-:Approach=0 w=1000 v=999 u=200
-done=0 dir=0 L=20 M=14 FM=0.4 BM=0.3
-if :Approach==0 then goto 2 end 
-d=:RF*(:RF<w) if d>0 then goto 6 end
-:FcuForward=0 :FcuBackward=0 :Approach=0 goto 3
-if d>24 and d<30 then goto 9 end
-done=0 cd=25.5-d dx=od-cd od=cd a=-(cd-5*dx) goto 15
+:Approach=0 w=1000 v=999 u=200 FF=0.2 BB=0.8 N=1 I=1 z=16
+done=0 L=20 M=8 N=100/:FcuGM FM=FF*N BM=BB*N
+if :Approach==0 then goto2 end 
+r=5 d=:RF*(:RF<w) if d>0 then goto6 end goto13
+:FcuForward=0 :FcuBackward=0 :Approach=0 goto3
+r-=2 d+=:RA if d>24 and d<30 then goto9 end
+done=0 cd=25.5-d dx=od-cd od=cd a=-(cd-r*dx) if a>d then a=d end gotoz
 
 :FcuForward=0 :FcuBackward=0 
 done++ if done>10 then :Approach=0 end
 goto 2*:Approach+2
 
-d=:R1 if d>v then d=:R2 end if d>v then d=:R3 end goto14-(8*(d<w))
-d=:R4 if d>v then d=:R5 end if d>v then d=:R6 end goto6-(1*(d>v))
-if a>d then a=d end F=a*FM*(a>0) T=L*(F>=M) F=F*(F<M)+M*(F>=M)
-:FcuBackward=-a*BM*(a<0) :FcuForward=F F+=FI goto16+(T<F)
-if :Approach then goto 4 else goto 9 end
+r-- d=:R1 if d>v then d=:R2 end if d>v then d=:R3 end goto14-(8*(d<w))
+r-- d=:R4 if d>v then d=:R5 end if d>v then d=:R6 end goto6-(1*(d>v))
+
+F=a*FM*(a>0) T=F  F=F*(F<M)+M*(F>=M) T=T*(T<L)+L*(T>=L)
+B=-a*BM*(a<0) B=B*(B<M)+M*(B>=M)
+:FcuBackward=-B :FcuForward=F F+=I*(a>0) goto18+(T<F)+(a<0)
+if :Approach then goto4 else goto9 end
