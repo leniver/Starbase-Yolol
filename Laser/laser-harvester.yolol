@@ -1,4 +1,6 @@
-:MLL1=9 :LTP=0 :LTR=0 :CTR=0 :TurretPitch=:LTPC goto :MiningMode+1
-M=sqrt(8.74^2+(23.67-:RF)^2)+2 if (:LTPC>85) or (:RF>42) then M=9 end
-:MLL1=M :LTP=:SMTP :TurretPitch=:LTPC goto :MiningMode+1
+:MLL1=9 :LTP=0 :LTR=0 :TTP=0 :CTR=0 :TurretPitch=:LTPC
+I=0 L=80 F=42 G=25 B=37.65 goto :MiningMode*3 
+M=sqrt(8.74^2+(23.67-:RF)^2)+2 P=:SMTP if P>L then P=L end
+if (:LTPC>L)or(P>L)or(:RF>F) then M=9 end if P<G then P=G end :MLL1=M
+I=(I<1)*:ML :LTP=P-I :TTP=B :TurretPitch=:LTPC goto :MiningMode*3
 goto1
