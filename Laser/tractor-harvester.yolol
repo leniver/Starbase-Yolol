@@ -1,0 +1,6 @@
+a=35 b=360 c=100 e=50
+d=:Scanner :TBL=d*c :TBE=d :TBP=a z/=(:TBT<1000)and(:TBO==1) goto4
+goto2
+:TBY=b*(:TBY!=b) :TBR=b*(:TBR!=b) f=e
+z/=:Scanner f-- z/=(f>0) goto5
+goto2
