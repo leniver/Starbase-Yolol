@@ -1,0 +1,7 @@
+a=0.149 b=2.7 c=150 f=b-a
+d=:SpeedRF s=(d-a)/f*c :Speed=s z/=(:SpeedCF*(d<3)) goto2
+:SpeedCF=0 e=5
+z/=(e-->0) goto4
+:SpeedCF=1 e=10
+z/=(e-->0) goto6
+goto2
