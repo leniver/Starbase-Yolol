@@ -1,0 +1,6 @@
+ i=3600 j=60 l="\nFuel Rods\n"  :FBD=l+"Initialization"
+ n="" o="-" q="h " r="m " t="s" u="Empty"  x=1000
+:FBT=:FB1+:FB2+:FB3+:FB4+:FB5+:FB6+:FB7+:FB8+:FB9+:FB0
+f=:FB1+:FB2+:FB3+:FB4+:FB5+:FB6+:FB7+:FB8+:FB9+:FB0 d=(:FBT-f)*5
+z/=(d==0) n=l+o if f==0 then n=l+u end :FBD=n goto3
+h=d/i/x*x w=(d-h*i) m=w/j/x*x s=w-m*j :FBD=l+h+q+m+r+s+t goto3
