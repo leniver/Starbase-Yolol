@@ -1,0 +1,6 @@
+i=3600 j=60 l="\nPropellant\n"  :GNSRD=l+"Initialization"
+n="" o="-" q="h " r="m " t="s" u="Empty"  x=1000
+f=:GNSR
+d=(f-:GNSR)*5
+z/=(d==0) n=l+o if f==0 then n=l+u end :GNSRD=n goto3
+h=d/i/x*x w=(d-h*i) m=w/j/x*x s=w-m*j :GNSRD=l+h+q+m+r+s+t goto3
