@@ -1,5 +1,5 @@
-:Approach=0 v=999 w=v+1 FF=0.8 BB=2.4  dd=25.5 min=24 max=30
-L=40 M=8 O=12 
+:Approach=0 v=999 w=v+1 FF=0.8 BB=2.4 dd=25.5 min=24 max=30
+L=40 M=8 O=12 s=-1
 done=0 N=100/:FcuGM FM=FF*N BM=BB*N
 if :Approach==0 then goto3 end if s<0 then s=:turtle end :turtle=2
 d=:RF*(:RF<w) if d>0 then goto7 end goto13
