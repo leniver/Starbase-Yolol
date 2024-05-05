@@ -1,0 +1,20 @@
+:Approach=0 v=999 w=v+1 FF=0.2 BB=0.8  dd=25.5 min=35 max=40
+L=40 M=8 O=12 G=15 s=-1
+done=0 N=100/:FcuGM FM=FF*N BM=BB*N
+if :Approach==0 then goto3 end if s<0 then s=:FcuGM end :FcuGM=G
+d=:RFAD*(:RFAD<w) if d==0 or (d>min and d<max) then goto10 end goto8
+
+
+done=0 cd=dd-d dx=od-cd od=cd a=-(cd-5*dx) if a>d then a=d end goto17
+
+:FcuForward=0 :FcuBackward=0
+done++ if done>5 then :Approach=0 :FcuGM=s s=-1 end
+goto 2*:Approach+2
+
+
+
+
+j=(a>0) F=a*FM*j T=F  F=F*(F<M)+M*(F>=M) T=T*(T<L)+L*(T>=L)
+k=(a<0) B=-a*BM*k B=B*(B<O)+O*(B>=O)
+:FcuBackward=B :FcuForward=F F+=1*j goto19+(T<F)+k
+if :Approach then goto4 else goto10 end
