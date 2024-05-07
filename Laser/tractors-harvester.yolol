@@ -1,2 +1,25 @@
-a=13 b=20
-d=:Scanner :TBLC=d*b :TBEC=d :TBPC=a goto2
+z/=(:TBE-1) :TBP=0 goto1
+d++ d*=(d<30) :TBP=25*(d<25) :TBPP=19.5 goto1+(1*:TBE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+___________________________________________________________
+// DOCUMENTATION
+:TBE is the trigger to enable the tractor beams
+:TBP are the tractor beams turret pitch
+:TBPP is the tractor beams tracting distance
