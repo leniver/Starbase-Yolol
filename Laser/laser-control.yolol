@@ -1,0 +1,26 @@
+a=4 b=0.2 c=1 d=0 e=1 f=1 
+:C1=0 :C2=0 :C3=0 :C4=0 z/=(:MiningMode<1) :ml1=0 :ml2=0 goto2
+d+=b*(3+4*:pulse) f=c c+=1*(d>=e) c=c*(c<=a)+1*(c>a) d*=(f==c)
+:C1=(c==1) :C2=(c==2) :C3=(c==3) :C4=(c==4) goto6+3*:pulse
+
+:ml1=:ml :ml2=:ml goto3-(:MiningMode<1)
+
+
+:ml1=:ml :ml2=0 z/=(:MiningMode<1) goto2
+z/=(:MiningMode<1) goto2
+:ml1=0 :ml2=:ml1 z/=(:MiningMode<1) goto2
+goto3-(:MiningMode<1)
+
+
+
+
+
+
+
+
+___________________________________________________________________
+// DOCUMENTAION
+
+:ml1 and :ml2 are the 2 set of laser
+:MiningMode is the trigger to enable mining
+:C1-:C4 are the ore collectors
