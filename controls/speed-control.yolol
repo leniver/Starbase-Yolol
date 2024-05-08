@@ -1,0 +1,31 @@
+l=50 m=65 n=m o=100 p=100 q=m
+goto 3+:turtle+(:slow*(:turtle==0))
+p=100 n=l q=l goto8 // Normal
+p=40 n=m q=m goto8 // Slow
+p=10 n=o q=o goto8 // Turtle
+
+
+:FcuGM=p :Rmax=n :Rmin=-n :Pmax=n :Pmin=-n :Ymax=q :Ymin=-q goto2
+
+
+
+
+
+
+
+
+
+
+
+
+_____________________________________________________
+// DOCUMENTATION
+:FcuGM is the main thrust multiplier
+:Rmax is the roll max
+:Rmin is the roll min
+:Pmax is the pitch max
+:Pmin is the pitch min
+:Ymax is the yaw max
+:Ymin is the yaw min
+:slow is the slow mode
+:turtle is the turtle mode
