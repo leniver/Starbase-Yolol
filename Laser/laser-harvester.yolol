@@ -1,11 +1,11 @@
-:MLL1=9 
-:LTP=0 :LTR=0 :CTR=0 :TurretPitch=:LTPC goto :MiningMode*2+1 
-M=sqrt(8.74^2+(23.67-:RF)^2)+1 if (:LTPC>85) or (:RF>42) then M=9 end
-P=:SMTP x/=(:Safezone-1) if P>85 then P=85 end if P<25 then P=25 end
-:MLL1=M 
-z/=:Aim :LTP=P :CTP=:LTPC goto :MiningMode*2+1
-:LTP=26 :CTP=:LTPC :MLL1=25 goto1+6*(:Aim==0) 
-goto1
+i=0 j=8.74 k=23.67 l=37.5 m=25 n=9
+:MLL1=n
+:LTP=0 :LTR=0 :CTR=0 :CTP=:LTPC goto :MiningMode*2+2 
+m=sqrt(j^2+(k-:RF)^2)+1 if (:LTPC>85) or (:RF>42) then m=n end :MLL1=m
+p=:SMTP if p>85 then p=85 end if p<25 then p=25 end
+z/=:Aim :LTP=p-i i=(i<1)*:ML :CTP=:LTPC goto :MiningMode*2+2
+:LTP=l :CTP=:LTPC :MLL1=m goto2+5*(:Aim==0) 
+goto2
 
 
 
@@ -28,4 +28,3 @@ _______________________________________________________________________
 :MiningMode is the trigger to enable mining mode
 :LTPC is the global turret pitch
 :RF is the range finder distance
-:Safezone is the variable to check if ship is in safezone
