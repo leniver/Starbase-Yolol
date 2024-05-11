@@ -1,0 +1,20 @@
+l="AFK :__\n\nETA: " h=3600 m=60 t=1000 w=":" x="0" r=l+"-" goto20
+s=:__ a/=s p=:__ goto4
+goto2
+s*=60 goto8
+s-- if s>0 then goto8 end
+:FcuForward=0 goto20
+
+hh=s/h/t*t mm=(s-(hh*h))/m/t*t ss=s-(hh*h)-(mm*m)
+if hh<10 then hh=x+hh end if mm<10 then mm=x+mm end
+if ss<10 then ss=x+ss end
+a/=((:__==p)or(:__==r)) p=l+hh+w+mm+w+ss :__=p goto5 
+goto19
+
+
+
+
+
+
+a/=:__ goto2
+p=r :__=p goto2
