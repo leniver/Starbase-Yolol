@@ -1,0 +1,28 @@
+a=0 b=0 d="\n" c="Waiting" e="Processing" f="km" g=" / " h=10000 i=10
+r=0
+a=:autoKm b=a b+=:autoM b*=(b>0) :autoKm=b goto3+(a!=b)+2*:autoT+r
+:AutoTravel=c+d+d+b+f r=0 goto3+2*:autoT
+:AutoTravel=e+d+d+(:autoR/h*i)+f+g+:autoKm+f r=1 goto3+2*:autoT
+goto5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_____________________________________________________
+// DOCUMENTATION
+
+:AutoTravel is the text box that display information
+:autoR is a variable in a memory chip
+:autoKm is a variable in a memory chip
+:autoM is the switch variable to increase/decrease km
+:autoT is the button that activate/deactivate auto-travel
