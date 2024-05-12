@@ -24,3 +24,4 @@ _____________________________________________________
 :autoR is a variable in a memory chip
 :autoKm is a variable in a memory chip
 :autoT is the button that activate/deactivate auto-travel
+:speed is the variable that contain the current speed
