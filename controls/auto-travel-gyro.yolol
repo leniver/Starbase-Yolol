@@ -1,13 +1,12 @@
-a=5 p=0 y=0 pa=1 ya=1
+a=2 b=0 c=0 d=0 e=0 f=0 g=0.01 h=0 i=0 j=100 k=2 l=2 m=10 p=0 y=0 
 goto2+:autoT
-:autoG=1 pa=1 ya=1 goto2+:autoT
-y=:autoYaw z/=y :FcuRotationalYaw=ya*(y>0)-ya(y<0) ya+=1*(ya<a)
-p=:autoPitch z/=p :FcuRotationalPitch=pa*(p>0)-pa(p<0) pa+=1*(pa<a)
-:FcuRotationalPitch=0 :FcuRotationalYaw=0 goto2+:autoT
-
-
-
-
+:autoG=1 goto2+2*:autoT
+y=:autoY b=abs(y/j) z/=(b>g) a=k+m*(b>l) y=((y<0)-(y>0))*(b>=c)*a c=b
+p=:autoP d=abs(p/j) z/=(d>g) a=k+m*(b>l) p=((p<0)-(p>0))*(d>=e)*a e=d
+f=:autoT :FcuRotationalPitch=p*f :FcuRotationalYaw=y*f goto2+5*f
+goto2+7*:autoT  
+f=:autoT :FcuRotationalPitch=-p*f :FcuRotationalYaw=-y*f goto2+7*f
+:FcuRotationalPitch=0 :FcuRotationalYaw=0 goto2+2*:autoT
 
 
 
@@ -23,6 +22,6 @@ _____________________________________________________
 // DOCUMENTATION
 
 :autoG is the reinitialization of the gyroscope
-:autoPitch current pitch
-:autoYaw current yaw
+:autoP current pitch
+:autoY current yaw
 :autoT is the button that activate/deactivate auto-travel
