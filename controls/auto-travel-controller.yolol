@@ -1,6 +1,6 @@
 a=1000 b=0 c=100 d=30 e=1000 f=0 g=0 h=0
-:autoR=0 f=:autoKm*e goto2+:autoT
-z/=f h=:autoR+(:speed/5*2) b=f-h :autoR=h
+:autoR=0 f=:autoKm*e :autoRm=:autoKm goto2+:autoT
+z/=f h=:autoR+(:speed/5*2) b=f-h :autoR=h :autoRm=b/e
 z/=f g=c*(b>a)+d*(b<=a and b>0) z/=g :FcuForward=g goto2+:autoT
 :autoT=0 :FcuForward=0 goto2
 
@@ -22,6 +22,7 @@ _____________________________________________________
 // DOCUMENTATION
 
 :autoR is a variable in a memory chip
+:autoRm is the variable to display distance on a progressbar
 :autoKm is a variable in a memory chip
 :autoT is the button that activate/deactivate auto-travel
 :speed is the variable that contain the current speed
