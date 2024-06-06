@@ -1,0 +1,20 @@
+a=60000 b=20 c=100 d=0 e=0 f=0 g=0 h=0.01 :GURL=0
+d=:GURL-3 g=:BT1+:BT2+:BT3+:BT4+:BT5+:BT6 e=(a-g)/a*c f=(b*:ML)
+e=e*(e>=f)+f*(f>e) :GURL=e*(e>=d)+d*(d>e) :Battery=g goto2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
