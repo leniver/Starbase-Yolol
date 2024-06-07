@@ -1,0 +1,37 @@
+goto:stabilize+1
+a=:sy-:sy*(:sy>150) :FcuUpDown=-a*a*a
+a=:sx-:sx*(:sx>150) :FcuRightLeft=-a*a*a goto:stabilize+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
