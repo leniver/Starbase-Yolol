@@ -1,0 +1,20 @@
+a="" b="" c=0 d=0 n=0.05 o="Off" s=" Ore" t=" Crystal"  r="\n" 
+u=100 v=1728 w="Result" x=" Stks" y=0 z=""
+if :S==1 then :Scan=1 goto4 end :Scn=w+r+r+o goto3
+:I=0 z=:M-s-t a=z+r
+:I=1 z=:M-s-t y=:V d=y/v d=(d+n)/u*u b=r+z+r+d+x+r+y
+:Scn=w+r+a+b+r goto3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
