@@ -1,0 +1,21 @@
+a="" b="" c="Out of Range" d=0 g="No results" n=0.05 o="OFF" s=" Ore"
+t=" Crystal" p="Scanning..." u=100 v=1728 w="Result" x=" " y=0 z=""
+e=4.86/(:d-.6) e=40*e*e*e+50*e :mj=-e f/=:Scn goto5+2*(:d<u)
+:Scn1UI=o :Scn2UI=""  goto3
+:ScnRs=1 f/=(:d>u) :Scn1UI=c :Scn2UI="" goto3
+:Scn1UI=g :Scn2UI="" goto3
+f/=(:ScnR==0) :ScnE=1 :Scn1UI=p :Scn2UI="" goto5+2*(:d<u)
+:ScnI=0 z=:ScnM-s-t y=:ScnV d=y/v d=(d+n)/u*u :Scn1UI=d+x+z
+:ScnI=1 z=:ScnM-s-t y=:ScnV d=y/v d=(d+n)/u*u :Scn2UI=d+x+z goto3
+
+
+
+
+
+
+
+
+
+
+
+// DOCUMENTATION
